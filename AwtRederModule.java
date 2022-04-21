@@ -3,10 +3,6 @@ package com.alibaba.fastjson2.support;
 import com.alibaba.fastjson2.modules.ObjectReaderModule;
 import com.alibaba.fastjson2.reader.ObjectReader;
 import com.alibaba.fastjson2.reader.ObjectReaderProvider;
-import com.alibaba.fastjson2.util.Fnv;
-
-import static com.alibaba.fastjson2.reader.ObjectReaders.*;
-
 import java.awt.*;
 import java.lang.reflect.Type;
 import java.util.Map;
@@ -47,7 +43,6 @@ public class AwtRederModule implements ObjectReaderModule {
                     (values) -> new Font(
                             (String) values.get(HASH_NAME)
                             , (Integer) values.get(HASH_STYLE)
-                            , (Integer) values.get(HASH_SIZE)
                     )
                     , fieldReader("name", String.class)
                     , fieldReader("style", int.class)
